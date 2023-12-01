@@ -1,0 +1,12 @@
+version: '3'
+services:
+  my-database:
+    image: mongo:4.4.4
+    environment:
+      - MONGO_INITDB_DATABASE=scd40db
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin12345
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongo_data:/data/db
